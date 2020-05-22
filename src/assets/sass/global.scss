@@ -1,0 +1,47 @@
+$spacer: 16;
+
+$spacers: (
+    "5": $spacer * 2.5px
+);
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "mixin.scss";
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $gray100;
+  font-size: 16px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo {
+  width: 100px;
+}
+
+.App {
+  width: 100%;
+  padding-right: 92px;
+  padding-left: 92px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.adrenalin-nav-link {
+  padding-left: 33px;
+  font-size: .875rem;
+  line-height: .875rem;
+  color: black;
+
+  &:hover {
+    color: $gray500;
+    text-decoration: none;
+  }
+}

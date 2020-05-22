@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import {ReactComponent as Logo} from './assets/img/adrenalin.svg';
+import NavItem from './components/NavItem';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container-fluid pt-5">
+        <div className="row justify-content-between">
+          <Logo className="logo" />
+          <div className="d-flex flex-row flex-wrap">
+            <NavItem>Culture</NavItem>
+            <NavItem>Work</NavItem>
+            <NavItem>Clients</NavItem>
+            <NavItem>Services</NavItem>
+            <NavItem>Careers</NavItem>
+            <NavItem>Contact</NavItem>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
