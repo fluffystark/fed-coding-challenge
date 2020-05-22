@@ -1,7 +1,5 @@
-$spacer: 16;
-
 $spacers: (
-    "5": $spacer * 2.5px
+    "5":  2.5rem
 );
 
 @import "~bootstrap/scss/bootstrap";
@@ -28,8 +26,8 @@ code {
 
 .App {
   width: 100%;
-  padding-right: 92px;
-  padding-left: 92px;
+  padding-right: 77px;
+  padding-left: 77px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -44,4 +42,67 @@ code {
     color: $gray500;
     text-decoration: none;
   }
+}
+
+.adrenalin-card {
+  padding-top: 4rem;
+
+  .tag {
+    font-size: .75rem;
+    line-height: .75rem;
+    text-transform: uppercase;
+    color: $gray700;
+    margin-bottom: 0px;
+    background: $gray200;
+    color: $gray700;
+    padding-left: .625rem;
+    padding-bottom: .75rem;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    right: calc(100%);
+    transform: rotate(-90deg);
+    transform-origin: right top;
+  }
+
+  > .card-top {
+    position: relative;
+
+    > img {
+      height: 390px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  > .title {
+    padding-right: 7.5rem;
+  }
+
+  .outline-text {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $colorBlue;
+  }
+
+  hr {
+    width: 32px;
+    height: 2px;
+    margin: 0;
+    border: none;
+    background-color: $colorBlue;
+    margin-right: 1rem;
+  }
+}
+
+h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -0.2px;
+  color: $gray800;
+  margin-bottom: 0px;
 }
