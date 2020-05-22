@@ -1,12 +1,12 @@
 import React from 'react';
 import data from '../../feed/data.json';
-import Card from '../../components/Card';
+import Tile from '../../components/Tile';
 
 function List() {
 
   const cards = data.map((value, _) => {
     const {id, title_long, tag, thumb, slug} = value
-    return <Card
+    return <Tile
               key={id}
               id={id}
               image={thumb}

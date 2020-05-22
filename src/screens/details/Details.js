@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import data from '../../feed/data.json';
 import Picture from '../../components/Picture';
 import ContentItem from '../../components/ContentItem';
+import Card from '../../components/Card';
 
 const propTypes = {};
 
@@ -61,7 +62,7 @@ export default class Details extends React.Component {
       <div className="row">
         <div className="col-auto image-col">
           <div className="image-container">
-            <div className="tag">{ tag }</div>
+            <Card tag={tag} />
             <Picture img={ image } slug={ slug } />
           </div>
         </div>
