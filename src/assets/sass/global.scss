@@ -57,11 +57,11 @@ code {
     line-height: .75rem;
     text-transform: uppercase;
     color: $gray700;
-    margin-bottom: 0px;
     background: $gray200;
-    color: $gray700;
+    margin-bottom: 0px;
     padding-left: .625rem;
     padding-bottom: .75rem;
+
     white-space: nowrap;
     position: absolute;
     top: 0;
@@ -90,7 +90,13 @@ code {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-weight: 700;
-    color: $colorBlue;
+    color: $blue500;
+
+    &:hover {
+      text-decoration: none;
+      color: $blue300;
+      transition: 0.2s;
+    }
   }
 
   hr {
@@ -98,9 +104,16 @@ code {
     height: 2px;
     margin: 0;
     border: none;
-    background-color: $colorBlue;
+    background-color: $blue500;
     margin-right: 1rem;
   }
+}
+
+h1 {
+  font-size: 4.25rem;
+  line-height: 4.625rem;
+  letter-spacing: -1.9125px;
+  font-weight: 700;
 }
 
 h3 {
@@ -116,4 +129,35 @@ h3 {
   margin-top: 6.25rem;
   border-top: 2px solid black;
   padding-bottom: 53px;
+}
+
+.image-col {
+  margin-top: 63px;
+
+  .tag {
+    font-size: .75rem;
+    line-height: .75rem;
+    text-transform: uppercase;
+    color: $gray700;
+    background: $gray200;
+    margin-bottom: 0px;
+    padding-left: .625rem;
+    padding-bottom: .75rem;
+
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    right: calc(100% - 15px);
+    transform: rotate(-90deg);
+    transform-origin: right top;
+  }
+
+}
+
+.detail-col {
+  margin-top: 160px;
+
+  h1 {
+    padding-right: 120px;
+  }
 }
