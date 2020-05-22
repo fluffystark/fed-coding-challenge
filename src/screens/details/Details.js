@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import data from '../../feed/data.json';
 import Picture from '../../components/Picture';
+import ContentItem from '../../components/ContentItem';
 
 const propTypes = {};
 
@@ -12,18 +13,50 @@ export default class Details extends React.Component {
     super(props);
     this.state = {
       details: {},
+      isDesc: false,
     };
+
+    this.toggleSortItems = this.toggleSortItems.bind(this)
   }
 
   componentWillMount() {
     const { id } = this.props.match.params
     const details = data.find((val) => val.id === parseInt(id))
-    console.log(details.image)
+    details.questions = details.questions.map((value, _) => {
+      value.date = new Date(value.date)
+      return value
+    })
     this.setState({details: details})
   }
 
+  toggleSortItems = () => {
+    const { isDesc, details } = this.state
+    const { questions } = details
+
+    if (this.state.isDesc) {
+      questions.sort((a,b) => a.date - b.date)
+    } else {
+      questions.sort((a,b) => b.date - a.date)
+    }
+
+    this.setState({
+      details: {
+        ...details,
+        questions: questions
+      },
+      isDesc: !isDesc
+    })
+  }
+
   render() {
-    const { tag, image, slug, title } = this.state.details
+    const { tag, image, slug, title, questions } = this.state.details
+
+    const content = questions.map((value, index) => {
+      const { date, text } = value
+
+      return <ContentItem key={date} date={date} text={text} id={index}/>
+    })
+
     return (
       <div className="row">
         <div className="col-auto image-col">
@@ -33,7 +66,15 @@ export default class Details extends React.Component {
           </div>
         </div>
         <div className="col offset-lg-1 detail-col">
-          <h1>{ title }</h1>
+          <div className="row">
+            <h1>{ title }</h1>
+          </div>
+          <div className="row pt-4">
+            <div className="sort-container" onClick={this.toggleSortItems}>
+              <small className="outline-text">Sort by Latest</small>
+            </div>
+          </div>
+          { content }
         </div>
       </div>
     );

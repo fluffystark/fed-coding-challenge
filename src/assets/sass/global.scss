@@ -4,16 +4,9 @@ $spacers: (
 
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import "mixin.scss";
-
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: $gray100;
-  font-size: 16px;
-}
+@import "base.scss";
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -49,23 +42,38 @@ code {
   }
 }
 
+.tag {
+  font-size: .75rem;
+  line-height: .75rem;
+  text-transform: uppercase;
+  color: $gray700;
+  background: $gray100;
+  margin-bottom: 0px;
+  padding-left: .625rem;
+  padding-bottom: .75rem;
+}
+
+hr.outline-bar {
+  width: 32px;
+  height: 2px;
+  margin: 0;
+  border: none;
+  margin-right: 1rem;
+  background-color: $gray400;
+
+  &.blue {
+    background-color: $blue500;
+  }
+}
+
 .adrenalin-card {
   padding-top: 4rem;
 
   .tag {
-    font-size: .75rem;
-    line-height: .75rem;
-    text-transform: uppercase;
-    color: $gray700;
-    background: $gray200;
-    margin-bottom: 0px;
-    padding-left: .625rem;
-    padding-bottom: .75rem;
-
     white-space: nowrap;
     position: absolute;
-    top: 0;
-    right: calc(100%);
+    top: -1px;
+    right: calc(100% + 0.5px);
     transform: rotate(-90deg);
     transform-origin: right top;
   }
@@ -83,46 +91,16 @@ code {
   > .title {
     padding-right: 7.5rem;
   }
-
-  .outline-text {
-    font-size: 13px;
-    line-height: 13px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: $blue500;
-
-    &:hover {
-      text-decoration: none;
-      color: $blue300;
-      transition: 0.2s;
-    }
-  }
-
-  hr {
-    width: 32px;
-    height: 2px;
-    margin: 0;
-    border: none;
-    background-color: $blue500;
-    margin-right: 1rem;
-  }
 }
 
-h1 {
-  font-size: 4.25rem;
-  line-height: 4.625rem;
-  letter-spacing: -1.9125px;
-  font-weight: 700;
-}
+.outline-text {
+  color: $blue500;
 
-h3 {
-  font-size: 1.625rem;
-  font-weight: 700;
-  line-height: 2rem;
-  letter-spacing: -0.2px;
-  color: $gray800;
-  margin-bottom: 0px;
+  &:hover {
+    text-decoration: none;
+    color: $blue300;
+    transition: 0.2s;
+  }
 }
 
 .adrenalin-footer {
@@ -135,19 +113,10 @@ h3 {
   margin-top: 63px;
 
   .tag {
-    font-size: .75rem;
-    line-height: .75rem;
-    text-transform: uppercase;
-    color: $gray700;
-    background: $gray200;
-    margin-bottom: 0px;
-    padding-left: .625rem;
-    padding-bottom: .75rem;
-
     white-space: nowrap;
     position: absolute;
-    top: 0;
-    right: calc(100% - 15px);
+    top: -1px;
+    right: calc(100% - 14.5px);
     transform: rotate(-90deg);
     transform-origin: right top;
   }
@@ -159,5 +128,18 @@ h3 {
 
   h1 {
     padding-right: 120px;
+  }
+
+  .content-item {
+    margin-top: 30px;
+
+    .date {
+      padding-top: 10px;
+      color: $gray400;
+    }
+  }
+
+  .sort-container {
+    cursor: pointer;
   }
 }

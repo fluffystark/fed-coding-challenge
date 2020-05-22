@@ -12,8 +12,10 @@ export default function Card(props) {
       </div>
       <h3 className="pt-4 pb-3 title">{ title_long }</h3>
       <div className="pt-3 d-flex align-items-center">
-        <hr />
-        <Link to={`/case/${id}`} className="outline-text">VIEW CASE STUDY</Link>
+        <hr className="outline-bar blue" />
+        <Link to={`/case/${id}`} className="outline-text">
+          <small>VIEW CASE STUDY</small>
+        </Link>
       </div>
     </div>
   )
