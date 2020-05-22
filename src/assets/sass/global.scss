@@ -22,6 +22,10 @@ code {
 
 .logo {
   width: 100px;
+
+  &.footer {
+    width: 83px;
+  }
 }
 
 .App {
@@ -33,7 +37,8 @@ code {
 }
 
 .adrenalin-nav-link {
-  padding-left: 33px;
+  padding-left: 26px;
+  padding-right: 7px;
   font-size: .875rem;
   line-height: .875rem;
   color: black;
@@ -105,4 +110,10 @@ h3 {
   letter-spacing: -0.2px;
   color: $gray800;
   margin-bottom: 0px;
+}
+
+.adrenalin-footer {
+  margin-top: 6.25rem;
+  border-top: 2px solid black;
+  padding-bottom: 53px;
 }
