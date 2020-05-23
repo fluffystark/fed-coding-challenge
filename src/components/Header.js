@@ -16,7 +16,7 @@ export default function Header() {
       <button className="navbar-toggler" type="button" onClick={toggleShow}>
         <BurgerIcon />
       </button>
-      <div className={`ml-auto collapse navbar-collapse flex-grow-0 ${isShow}`} id="navbarToggler">
+      <div className={`ml-auto collapse navbar-collapse flex-grow-0 ${isShow}`}>
         <div className="navbar-nav">
           <NavItem>Culture</NavItem>
           <NavItem>Work</NavItem>

@@ -72,6 +72,24 @@ hr.outline-bar {
   margin-top: 6.25rem;
   border-top: 2px solid black;
   padding-bottom: 53px;
+
+  .adrenalin-footer-row {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$largeMobileScreen} {
+      display: block;
+
+      .footer-link-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        > .adrenalin-nav-link {
+          width: 50%;
+        }
+      }
+    }
+  }
 }
 
 .detail-page, .list-page, .main-page {
