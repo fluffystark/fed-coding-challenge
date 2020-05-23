@@ -67,7 +67,7 @@ export default class Details extends React.Component {
             <Picture img={ image } slug={ slug } />
           </div>
         </div>
-        <div className="col offset-lg-1 detail-col">
+        <div className="col col-md-10 col-lg offset-lg-1 detail-col">
           <div className="row">
             <h1>{ title }</h1>
           </div>

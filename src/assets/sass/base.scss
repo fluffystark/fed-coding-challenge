@@ -26,6 +26,12 @@ h1 {
   letter-spacing: -1.9125px;
   font-weight: 700;
   margin-bottom: 0;
+
+  @media #{$largeMobileScreen} {
+    // 75% of normal font size
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
 }
 
 h2 {
@@ -34,6 +40,12 @@ h2 {
   line-height: 2.25rem;
   letter-spacing: -0.5px;
   margin-bottom: 0;
+
+  @media #{$largeMobileScreen} {
+    // 75% of normal font size
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 h3 {
@@ -43,6 +55,12 @@ h3 {
   letter-spacing: -0.2px;
   color: $gray800;
   margin-bottom: 0px;
+
+  @media #{$largeMobileScreen} {
+    // 75% of normal font size
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 }
 
 small {

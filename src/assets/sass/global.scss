@@ -121,6 +121,10 @@ hr.outline-bar {
 
   > .title {
     padding-right: 7.5rem;
+
+    @media #{$largeMobileScreen} {
+      padding-right: 4rem;
+    }
   }
 }
 
@@ -141,14 +145,21 @@ hr.outline-bar {
   margin-top: 160px;
 
   @media #{$laptopScreen} {
-    margin-top: 100px !important;
+    margin-top: 100px;
+  }
+
+  @media #{$tabletMobileScreen} {
+    margin-top: 60px;
+    .row {
+      margin: 0;
+    }
   }
 
   h1 {
     padding-right: 120px;
 
     @media #{$laptopScreen} {
-      padding-right: 0px !important;
+      padding-right: 0px;
     }
   }
 
@@ -183,10 +194,6 @@ hr.outline-bar {
     right: calc(100% - 14.5px);
     transform: rotate(-90deg);
     transform-origin: right top;
-  }
-
-  .image-container {
-    
   }
 
 }
