@@ -1,0 +1,48 @@
+@import "../../assets/sass/mixin.scss";
+
+.detail-col {
+  margin-top: 160px;
+
+  @media #{$laptopScreen} {
+    margin-top: 100px;
+  }
+
+  @media #{$tabletMobileScreen} {
+    margin-top: 60px;
+    .row {
+      margin: 0;
+    }
+  }
+
+  h1 {
+    padding-right: 120px;
+
+    @media #{$laptopScreen} {
+      padding-right: 0px;
+    }
+  }
+
+  .content-item {
+    margin-top: 30px;
+
+    .date {
+      padding-top: 10px;
+      color: $gray400;
+    }
+  }
+
+  .sort-container {
+    cursor: pointer;
+    display: flex;
+    margin-top: 1px;
+    align-items: center;
+
+    .refresh-icon {
+      margin-left: 5px;
+    }
+  }
+}
+
+.image-col {
+  margin-top: 63px;
+}

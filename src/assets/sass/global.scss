@@ -8,11 +8,6 @@ $spacers: (
 @import "mixin.scss";
 @import "base.scss";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .logo {
   width: 100px;
 
@@ -25,34 +20,6 @@ code {
   @media #{$largeMobileScreen} {
     padding-top: 1rem;
   }
-}
-
-.adrenalin-nav-link {
-  padding-left: 26px;
-  padding-right: 7px;
-  font-size: .875rem;
-  line-height: .875rem;
-  color: black;
-
-  &:hover {
-    color: $gray500;
-    text-decoration: none;
-  }
-
-  @media #{$largeMobileScreen} {
-    padding: 1rem 0;
-  }
-}
-
-.tag {
-  font-size: .75rem;
-  line-height: .75rem;
-  text-transform: uppercase;
-  color: $gray700;
-  background: $gray100;
-  margin-bottom: 0px;
-  padding-left: .625rem;
-  padding-bottom: .75rem;
 }
 
 hr.outline-bar {
@@ -68,132 +35,6 @@ hr.outline-bar {
   }
 }
 
-.adrenalin-footer {
-  margin-top: 6.25rem;
-  border-top: 2px solid black;
-  padding-bottom: 53px;
-
-  .adrenalin-footer-row {
-    display: flex;
-    justify-content: space-between;
-
-    @media #{$largeMobileScreen} {
-      display: block;
-
-      .footer-link-container {
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 1rem;
-        > .adrenalin-nav-link {
-          width: 50%;
-        }
-      }
-    }
-  }
-}
-
 .detail-page, .list-page, .main-page {
   min-height: 400px;
-}
-
-///////////////////////////////////////
-//////////// List Page Styles /////////
-
-.adrenalin-card {
-  padding-top: 4rem;
-
-  .tag {
-    white-space: nowrap;
-    position: absolute;
-    top: -1px;
-    right: calc(100% + 0.5px);
-    transform: rotate(-90deg);
-    transform-origin: right top;
-  }
-
-  > .card-top {
-    position: relative;
-
-    > img {
-      height: 390px;
-    }
-  }
-
-  > .title {
-    padding-right: 7.5rem;
-
-    @media #{$largeMobileScreen} {
-      padding-right: 4rem;
-    }
-  }
-}
-
-.outline-text {
-  color: $blue500;
-
-  &:hover {
-    text-decoration: none;
-    color: $blue300;
-    transition: 0.2s;
-  }
-}
-
-///////////////////////////////////////
-//////////// Detail Page Styles /////////
-
-.detail-col {
-  margin-top: 160px;
-
-  @media #{$laptopScreen} {
-    margin-top: 100px;
-  }
-
-  @media #{$tabletMobileScreen} {
-    margin-top: 60px;
-    .row {
-      margin: 0;
-    }
-  }
-
-  h1 {
-    padding-right: 120px;
-
-    @media #{$laptopScreen} {
-      padding-right: 0px;
-    }
-  }
-
-  .content-item {
-    margin-top: 30px;
-
-    .date {
-      padding-top: 10px;
-      color: $gray400;
-    }
-  }
-
-  .sort-container {
-    cursor: pointer;
-    display: flex;
-    margin-top: 1px;
-    align-items: center;
-
-    .refresh-icon {
-      margin-left: 5px;
-    }
-  }
-}
-
-.image-col {
-  margin-top: 63px;
-
-  .tag {
-    white-space: nowrap;
-    position: absolute;
-    top: -1px;
-    right: calc(100% - 14.5px);
-    transform: rotate(-90deg);
-    transform-origin: right top;
-  }
-
 }

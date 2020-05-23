@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import data from '../../feed/data.json';
+
+import Card from '../../components/Card';
 import Picture from '../../components/Picture';
 import ContentItem from '../../components/ContentItem';
-import Card from '../../components/Card';
+
 import {ReactComponent as RefreshIcon} from '../../assets/icons/refresh.svg'
+
+import './styles.scss'
 
 const propTypes = {};
 
@@ -62,7 +66,7 @@ export default class Details extends React.Component {
     return (
       <div className="row detail-page">
         <div className="col-12 col-lg-6 col-xl-auto image-col">
-          <div className="image-container">
+          <div className="position-relative">
             <Card tag={tag} />
             <Picture img={ image } slug={ slug } />
           </div>

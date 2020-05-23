@@ -1,6 +1,9 @@
-import React from 'react';
-import data from '../../feed/data.json';
-import Tile from '../../components/Tile';
+import React from 'react'
+import data from '../../feed/data.json'
+
+import Tile from '../../components/Tile'
+
+import './styles.scss'
 
 function List() {
 
