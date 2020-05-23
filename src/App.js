@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container-fluid pt-5">
+      <div className="container-fluid pt-5 main-page">
         <Header />
         <Routes />
         <Footer />

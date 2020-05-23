@@ -4,6 +4,7 @@ import data from '../../feed/data.json';
 import Picture from '../../components/Picture';
 import ContentItem from '../../components/ContentItem';
 import Card from '../../components/Card';
+import {ReactComponent as RefreshIcon} from '../../assets/icons/refresh.svg'
 
 const propTypes = {};
 
@@ -59,8 +60,8 @@ export default class Details extends React.Component {
     })
 
     return (
-      <div className="row">
-        <div className="col-auto image-col">
+      <div className="row detail-page">
+        <div className="col-12 col-lg-6 col-xl-auto image-col">
           <div className="image-container">
             <Card tag={tag} />
             <Picture img={ image } slug={ slug } />
@@ -73,6 +74,7 @@ export default class Details extends React.Component {
           <div className="row pt-4">
             <div className="sort-container" onClick={this.toggleSortItems}>
               <small className="outline-text">Sort by Latest</small>
+              <RefreshIcon className="refresh-icon" />
             </div>
           </div>
           { content }

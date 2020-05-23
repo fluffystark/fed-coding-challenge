@@ -9,10 +9,15 @@ body {
 
 .App {
   width: 100%;
-  padding-right: 77px;
-  padding-left: 77px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 77px;
+  padding-left: 77px;
+
+  @media #{$tabletMobileScreen} {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 h1 {
@@ -20,6 +25,7 @@ h1 {
   line-height: 4.625rem;
   letter-spacing: -1.9125px;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -27,6 +33,7 @@ h2 {
   font-size: 2rem;
   line-height: 2.25rem;
   letter-spacing: -0.5px;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -53,4 +60,14 @@ p {
   color: $gray900;
   margin-top: 10px;
   font-family: 'Merriweather', serif;
+  margin-bottom: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button:focus {
+  outline: none;
 }

@@ -17,7 +17,7 @@ function List() {
   })
 
   return (
-    <div className="row">
+    <div className="row list-page">
       { cards }
     </div>
   );

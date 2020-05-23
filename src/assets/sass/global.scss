@@ -21,12 +21,10 @@ code {
   }
 }
 
-.App {
-  width: 100%;
-  padding-right: 77px;
-  padding-left: 77px;
-  margin-right: auto;
-  margin-left: auto;
+.navbar-nav {
+  @media #{$largeMobileScreen} {
+    padding-top: 1rem;
+  }
 }
 
 .adrenalin-nav-link {
@@ -39,6 +37,10 @@ code {
   &:hover {
     color: $gray500;
     text-decoration: none;
+  }
+
+  @media #{$largeMobileScreen} {
+    padding: 1rem 0;
   }
 }
 
@@ -66,6 +68,19 @@ hr.outline-bar {
   }
 }
 
+.adrenalin-footer {
+  margin-top: 6.25rem;
+  border-top: 2px solid black;
+  padding-bottom: 53px;
+}
+
+.detail-page, .list-page, .main-page {
+  min-height: 400px;
+}
+
+///////////////////////////////////////
+//////////// List Page Styles /////////
+
 .adrenalin-card {
   padding-top: 4rem;
 
@@ -83,8 +98,6 @@ hr.outline-bar {
 
     > img {
       height: 390px;
-      width: 100%;
-      object-fit: cover;
     }
   }
 
@@ -103,10 +116,43 @@ hr.outline-bar {
   }
 }
 
-.adrenalin-footer {
-  margin-top: 6.25rem;
-  border-top: 2px solid black;
-  padding-bottom: 53px;
+///////////////////////////////////////
+//////////// Detail Page Styles /////////
+
+.detail-col {
+  margin-top: 160px;
+
+  @media #{$laptopScreen} {
+    margin-top: 100px !important;
+  }
+
+  h1 {
+    padding-right: 120px;
+
+    @media #{$laptopScreen} {
+      padding-right: 0px !important;
+    }
+  }
+
+  .content-item {
+    margin-top: 30px;
+
+    .date {
+      padding-top: 10px;
+      color: $gray400;
+    }
+  }
+
+  .sort-container {
+    cursor: pointer;
+    display: flex;
+    margin-top: 1px;
+    align-items: center;
+
+    .refresh-icon {
+      margin-left: 5px;
+    }
+  }
 }
 
 .image-col {
@@ -121,25 +167,8 @@ hr.outline-bar {
     transform-origin: right top;
   }
 
-}
-
-.detail-col {
-  margin-top: 160px;
-
-  h1 {
-    padding-right: 120px;
+  .image-container {
+    
   }
 
-  .content-item {
-    margin-top: 30px;
-
-    .date {
-      padding-top: 10px;
-      color: $gray400;
-    }
-  }
-
-  .sort-container {
-    cursor: pointer;
-  }
 }
