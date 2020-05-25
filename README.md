@@ -8,7 +8,6 @@ npm install
 npm start
 ```
 
-
 ## Document Structure
 
 ### All important files will be located in the [src] folder

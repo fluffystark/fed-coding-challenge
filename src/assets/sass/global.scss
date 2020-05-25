@@ -38,3 +38,13 @@ hr.outline-bar {
 .detail-page, .list-page, .main-page {
   min-height: 400px;
 }
+
+.outline-text {
+  color: $blue500;
+
+  &:hover {
+    text-decoration: none;
+    color: $blue300;
+    transition: 0.2s;
+  }
+}
