@@ -22,8 +22,9 @@ const NavItemContainer = styled.a`
 
 
 export default function NavItem(props) {
+  const { className } = props
   return (
-    <NavItemContainer href="#">
+    <NavItemContainer href="#" className={ className }>
       {props.children}
     </NavItemContainer>
   )

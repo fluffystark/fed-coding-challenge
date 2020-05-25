@@ -7,8 +7,11 @@ import theme from './Theme'
 
 const FooterContainer = styled.div`
   margin-top: 6.25rem;
-  border-top: 2px solid black;
   padding-bottom: 53px;
+
+  .adrenalin-footer {
+    border-top: 2px solid black;
+  }
 
   .adrenalin-footer-row {
     display: flex;
@@ -21,7 +24,7 @@ const FooterContainer = styled.div`
         display: flex;
         flex-wrap: wrap;
         padding-top: 1rem;
-        > .adrenalin-nav-link {
+        > .adrenalin-nav-footer-link {
           width: 50%;
         }
       }
@@ -38,12 +41,12 @@ export default function Footer() {
             <div className="col adrenalin-footer-row">
               <Logo className="logo footer" />
               <div className="footer-link-container">
-                <NavItem>Privacy</NavItem>
-                <NavItem>Sitemap</NavItem>
-                <NavItem>Facebook</NavItem>
-                <NavItem>Linkedin</NavItem>
-                <NavItem>Instagram</NavItem>
-                <NavItem>Twitter</NavItem>
+                <NavItem className="adrenalin-nav-footer-link">Privacy</NavItem>
+                <NavItem className="adrenalin-nav-footer-link">Sitemap</NavItem>
+                <NavItem className="adrenalin-nav-footer-link">Facebook</NavItem>
+                <NavItem className="adrenalin-nav-footer-link">Linkedin</NavItem>
+                <NavItem className="adrenalin-nav-footer-link">Instagram</NavItem>
+                <NavItem className="adrenalin-nav-footer-link">Twitter</NavItem>
               </div>
             </div>
           </div>

@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import Picture from './Picture'
 import Card from './Card'
 
 export default function Tile(props) {
   const { id, image, title_long, tag, slug } = props
+
   return (
     <div className="adrenalin-card col-12 col-lg-6 col-md-12">
       <div className="card-top">

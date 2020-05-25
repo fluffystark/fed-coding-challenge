@@ -1,18 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import data from '../../feed/data.json';
+import React from 'react'
+import data from '../../feed/data.json'
 
-import Card from '../../components/Card';
-import Picture from '../../components/Picture';
-import ContentItem from '../../components/ContentItem';
+import Card from '../../components/Card'
+import Picture from '../../components/Picture'
+import ContentItem from '../../components/ContentItem'
 
 import {ReactComponent as RefreshIcon} from '../../assets/icons/refresh.svg'
 
 import './styles.scss'
-
-const propTypes = {};
-
-const defaultProps = {};
 
 export default class Details extends React.Component {
   constructor(props) {
@@ -28,8 +23,10 @@ export default class Details extends React.Component {
   componentWillMount() {
     const { id } = this.props.match.params
     const details = data.find((val) => val.id === parseInt(id))
-    details.questions = details.questions.map((value, _) => {
+
+    details.questions = details.questions.map((value, index) => {
       value.date = new Date(value.date)
+      value.id = index
       return value
     })
     this.setState({details: details})
@@ -57,10 +54,10 @@ export default class Details extends React.Component {
   render() {
     const { tag, image, slug, title, questions } = this.state.details
 
-    const content = questions.map((value, index) => {
-      const { date, text } = value
+    const content = questions.map((value, _) => {
+      const { date, text, id } = value
 
-      return <ContentItem key={date} date={date} text={text} id={index}/>
+      return <ContentItem key={date} date={date} text={text} id={id}/>
     })
 
     return (
@@ -87,6 +84,3 @@ export default class Details extends React.Component {
     );
   }
 }
-
- Details.propTypes = propTypes;
- Details.defaultProps = defaultProps;
