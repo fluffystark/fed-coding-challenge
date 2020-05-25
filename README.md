@@ -1,6 +1,8 @@
 
 ## Quick Overview
 
+### Installation
+
 ```
 npm install
 npm start
