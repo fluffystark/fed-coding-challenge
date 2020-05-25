@@ -35,8 +35,11 @@ hr.outline-bar {
   }
 }
 
-.detail-page, .list-page, .main-page {
-  min-height: 400px;
+.main-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .outline-text {

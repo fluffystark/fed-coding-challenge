@@ -1,3 +1,6 @@
+// These styles are composed of default tag styles to be used
+// And styles that are used by the whole web application
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -7,7 +10,7 @@ body {
   font-size: 16px;
 }
 
-.App {
+#App {
   width: 100%;
   margin-right: auto;
   margin-left: auto;

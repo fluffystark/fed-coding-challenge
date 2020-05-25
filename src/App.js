@@ -7,7 +7,7 @@ import Routes from './screens/Routes'
 function App() {
 
   return (
-    <div className="App">
+    <div id="App">
       <div className="container-fluid pt-5 main-page">
         <Header />
         <Routes />
