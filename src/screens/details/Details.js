@@ -3,7 +3,7 @@ import data from '../../feed/data.json'
 
 import Card from '../../components/Card/Card'
 import Picture from '../../components/Picture/Picture'
-import DetailsContentItem from './components/DetailsContentItem'
+import DetailsContentItem from './components/DetailContentItem/DetailsContentItem'
 
 import {ReactComponent as RefreshIcon} from '../../assets/icons/refresh.svg'
 
