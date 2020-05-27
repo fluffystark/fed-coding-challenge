@@ -38,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 2.5rem;
+  padding-top: 2rem;
 }
 
 h1 {
@@ -138,6 +138,7 @@ hr.outline-bar {
 
 .outline-text {
   color: $blue500;
+  line-height: 13px;
 
   &:hover {
     text-decoration: none;

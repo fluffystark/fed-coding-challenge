@@ -1,5 +1,9 @@
 @import "./../../assets/sass/mixin.scss";
 
+.navbar {
+  padding-bottom: 0px;
+}
+
 .navbar-nav {
   @media #{$tabletMobileScreen} {
     padding-top: 1rem;
