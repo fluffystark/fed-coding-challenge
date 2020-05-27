@@ -1,0 +1,21 @@
+@import "./../../../../assets/sass/mixin.scss";
+
+.list-tile {
+  margin-top: 4rem;
+
+  .card-top {
+    position: relative;
+
+    > img {
+      height: 390px;
+    }
+  }
+
+  .title {
+    padding-right: 7.5rem;
+
+    @media #{$largeMobileScreen} {
+      padding-right: 4rem;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import data from '../../feed/data.json'
 
-import Tile from '../../components/Tile'
+import Tile from './components/ListTile/ListTile'
 
 import './styles.scss'
 
@@ -20,10 +20,8 @@ function List() {
   })
 
   return (
-    <div className="row list-page">
-      { cards }
-    </div>
+    <div className="row list-page">{ cards }</div>
   );
 }
 
-export default List;
+export default List

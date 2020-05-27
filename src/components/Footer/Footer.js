@@ -1,40 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
 
-import NavItem from './NavItem'
-import {ReactComponent as Logo} from '../assets/img/adrenalin.svg'
-import theme from './Theme'
+import NavItem from '../NavItem/NavItem'
+import {ReactComponent as Logo} from '../../assets/img/adrenalin.svg'
 
-const FooterContainer = styled.div`
-  margin-top: 6.25rem;
-  padding-bottom: 53px;
-
-  .adrenalin-footer {
-    border-top: 2px solid black;
-  }
-
-  .adrenalin-footer-row {
-    display: flex;
-    justify-content: space-between;
-
-    @media ${theme.largeMobileScreen} {
-      display: block;
-
-      .footer-link-container {
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 1rem;
-        > .adrenalin-nav-footer-link {
-          width: 50%;
-        }
-      }
-    }
-  }
-`
+import './Footer.scss'
 
 export default function Footer() {
   return (
-    <FooterContainer className="row">
+    <div className="row footer-container">
       <div className="col">
         <div className="adrenalin-footer pt-4">
           <div className="row">
@@ -52,6 +25,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </FooterContainer>
+    </div>
   )
 }

@@ -1,0 +1,31 @@
+@import "./../../assets/sass/mixin.scss";
+
+.footer-container {
+  margin-top: 6.25rem;
+  padding-bottom: 53px;
+
+  .adrenalin-footer {
+    border-top: 2px solid black;
+  }
+
+  .adrenalin-footer-row {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-link-container {
+      display: flex;
+    }
+
+    @media #{$tabletMobileScreen} {
+      display: block;
+
+      .footer-link-container {
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        > .adrenalin-nav-footer-link {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

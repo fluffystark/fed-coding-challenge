@@ -1,9 +1,9 @@
 import React from 'react'
 import data from '../../feed/data.json'
 
-import Card from '../../components/Card'
-import Picture from '../../components/Picture'
-import ContentItem from '../../components/ContentItem'
+import Card from '../../components/Card/Card'
+import Picture from '../../components/Picture/Picture'
+import DetailsContentItem from './components/DetailsContentItem'
 
 import {ReactComponent as RefreshIcon} from '../../assets/icons/refresh.svg'
 
@@ -36,7 +36,7 @@ export default class Details extends React.Component {
     const { isDesc, details } = this.state
     const { questions } = details
 
-    if (this.state.isDesc) {
+    if ( isDesc ) {
       questions.sort((a,b) => a.date - b.date)
     } else {
       questions.sort((a,b) => b.date - a.date)
@@ -57,7 +57,7 @@ export default class Details extends React.Component {
     const content = questions.map((value, _) => {
       const { date, text, id } = value
 
-      return <ContentItem key={date} date={date} text={text} id={id}/>
+      return <DetailsContentItem key={date} date={date} text={text} id={id}/>
     })
 
     return (
