@@ -11,19 +11,21 @@ export default function ListTile(props) {
 
   return (
     <div className="col-12 col-lg-6 col-md-12 list-tile">
-      <Link to={`/case/${id}`}>
+      <div>
         <div className="card-top">
           <Card tag={tag} />
           <Picture img={ image } slug={ slug } />
         </div>
         <h3 className="pt-4 pb-3 title">{ title_long }</h3>
         <div className="pt-3 d-flex align-items-center">
-          <hr className="outline-bar blue" />
-          <div className="outline-text">
-            <small>VIEW CASE STUDY</small>
-          </div>
+          <Link to={`/case/${id}`} className="outline-container">
+            <hr className="outline-bar blue" />
+            <div className="outline-text">
+              <small>VIEW CASE STUDY</small>
+            </div>
+          </Link>
         </div> 
-      </Link>
+      </div>
     </div>
   )
 }

@@ -14,4 +14,17 @@
       padding-right: 4rem;
     }
   }
+
+  .outline-container {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      transition: 0.2s;
+
+      .outline-bar {
+        background-color: $blue300;
+      }
+    }
+  }
 }
