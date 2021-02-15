@@ -30,30 +30,6 @@ export default class Details extends React.Component {
       return value
     })
     this.setState({details: details})
-
-    if(!window.Notification) {
-      console.log('Browser does not support notifications.');
-    } else {
-        // check if permission is already granted
-      if (Notification.permission === 'granted') {
-        // show notification here
-      } else {
-          // request permission from user
-          Notification.requestPermission().then(function(p) {
-            if(p === 'granted') {
-                // show notification here
-                var notify = new Notification('Hi there!', {
-                  body: 'How are you doing?',
-                  icon: 'https://bit.ly/2DYqRrh',
-                })
-            } else {
-                console.log('User blocked notifications.');
-            }
-          }).catch(function(err) {
-              console.error(err);
-          });
-      }
-    }
   }
 
   toggleSortItems = () => {
