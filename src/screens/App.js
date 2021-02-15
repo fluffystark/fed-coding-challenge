@@ -10,6 +10,7 @@ function App() {
     <div id="App">
       <div className="container-fluid main-page">
         <Header />
+        <div id="webpushr-subscription-button"></div>
         <Routes />
         <Footer />
       </div>
